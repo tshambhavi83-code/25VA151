@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Box Model</title>
+        <style>
+            body {
+                margin:0px;
+                padding:0;
+            }
+            #main{
+                width: 880px;
+                height: 200px;
+                background-color: yellow;
+                border: 2px;
+                margin: 0 auto;
+                display:flex;
+            }
+
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color:magenta;
+                margin-right: 25px;
+            }
+
+            .box:nth-child(odd){
+                background-color: red;
+
+
+            }
+            
+            .box:nth-child(even){
+                background-color: green;
+            }
+
+            
+            
+
+                
+            
+
+        </style>
+    </head>
+    <body>\
+        <div id="main">
+            <div class="box"></div>
+          <div class="box"></div>           
+           <div class="box"></div>
+            <div class="box"></div>
+
+
+
+            </div>
+        
+
+            
+
+    
+
+
+        
+
+
+        
+    </body>
+</html>
