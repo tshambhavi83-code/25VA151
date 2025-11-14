@@ -1,136 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        h1{
+            color:aquamarine;
+            font-size: 30px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
 
-        <meta charset="UTF">
-
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>CSS Selector: CSS Combinators</title>
-        <link rel="stylesheet" href="style.css"/>
-        <style>
-            
-            div p{
-                color:rgb(25,235,21);
-            }
-
-            div > p{
-                background-color: blueviolet;
-
-            }
-
-            div + p{
-                font-size:30px;
-            }
-
-            /*CSS pseudo-classes
-
-            A CSS pseudo-classes is a keyword that can be added to a selector,
-             to define a style for a special state of an element.*/
-
-             a:hover{
-
-                color:rgb(191,43,43);
-             }
-
-             a:visited{
-
-                color:blueviolet;
-             }
-
-             a:link{
-
-                background-color:aqua;
-             }
-
-             div p{
-                font-size:30px;
-                font-family:Arial, Helvetica, sans-serif;
-             }
-
-             div p::first-line{
-
-                text-transform:capitalize;
-             }
-
-             ::marker{
-
-                color:red;
-                font-size:40px;
-             }
-
-             ul li{
-                margin:10px;
-                border-right:1px solid #F04;
-                padding-right:20px;
-             }
-
-
-             ul li:nth-child(5){
-                border-right:0px;
-             }
-
-             ul li::first-letter{
-                font-size:25px;color:aqua;
-             }
-
-
-             .para::first-letter{
-
-                color:red;
-             }
-
-             .para::before{
-                content:"Read More";
-                color:blue;
-                font-size:30px;
-             }
-
-             div{
-                box-sizing:border-box;
-             }
-        </style>
-    </head>
-    <body>
-
-        <p class="para">
-
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Tempore beatae sequi id quasi nam repudiandae incidunt totam facere, est
-        libero quae possimus, maiores vero? Assumenda voluptatibus distinctio explicabo ac
-        usamus voluptatum.
+        .txt_clr{
+            color: #999;
+        }
+        #para{
+            color: blueviolet;
+        }
+        p, h1, h3{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Hello World!</h1>
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt temporibus quaerat nulla tempore quo earum molestiae, non maiores ex facere placeat exercitationem aliquid nisi est porro inventore eaque omnis impedit.
         </p>
 
-        <!--first div-->
-
-        <div>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, alias facere velit odit, veniam provident, facilis veritatis quasi quas porro at nam del
-                ectus. Culpa quis quod, dolorem qui laboriosam quidem.</p>
-
-                <a href="#"target="_blank">
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit possimus blanditiis corporis, esse dolorum optio inventore illum consequatur eligendi magni dolo
-                        remque non, accusamus expedita incidunt hic laborum, pariatur nam natus.</p>
-
-                </a>
-
-        </div><!--first div-->
-
-        <p><!--second para-->
-
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid provident, architecto nulla pariatur soluta hic esse temporibus adipisci e
-            ligendi similique alias aliquam voluptatibus, labore eveniet dolore commodi quasi deserunt.
+        <p class="txt_clr">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde vitae tempore perspiciatis ducimus corrupti numquam expedita at eaque voluptates, cupiditate minus enim doloribus nulla veniam illo temporibus error! Recusandae.
         </p>
 
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam officiis eveniet voluptate soluta, quas omnis sit aliquam molestiae amet, doloribus architecto? Nihil laudantium iste quas. Animi nihil cumque laborum architecto.
+        </p>
 
-        <ul>
-
-            <li>home</li>
-            <li>about</li>
-            <li>contact</li>
-            <li>services</li>
-            <li>gallery</li>
-        </ul>
-
-    </body>
+        <h3 class="txt_clr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque ut, fuga harum iste rem perspiciatis incidunt voluptatum dolorem saepe provident fugiat reprehenderit quae eum reiciendis! Aperiam, amet perferendis! Vero, recusandae?</h3>
+</body>
 </html>
