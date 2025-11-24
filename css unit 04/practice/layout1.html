@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout 1</title>
+    
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #e8e8e8; /* Light grey like picture background */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper{
+    width: 420px;                /* exact boxed layout like image */
+    background: white;
+    padding: 10px;
+    margin: auto;
+}
+
+.logo, .navigation, .header, .footer,
+.sidebar, .body-area{
+    background: #bfbfbf;         /* same grey boxes */
+    border: 1px solid #999;      /* thin dark border like picture */
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* navigation position FIXED below logo */
+.navigation{
+    margin-top: 5px;
+}
+
+.header{
+    margin-top: 5px;
+}
+
+/* CONTENT FLEX WITH GAP */
+.content{
+    display: flex;
+    margin-top: 5px;
+    gap: 15px;       /* perfect gap between sidebar and body area */
+}
+
+/* SIDEBAR */
+.sidebar{
+    width: 30%;
+    min-height: 200px;
+}
+
+/* BODY AREA */
+.body-area{
+    width: 70%;
+    min-height: 200px;
+}
+
+.footer{
+    margin-top: 10px;
+}
+
+</style>
+<body>
+
+<div class="wrapper">
+
+    <div class="logo">Logo</div>
+
+    <div class="navigation">Navigation</div>
+
+    <div class="header">Header / Banner</div>
+
+    <div class="content">
+        <div class="sidebar">Side Bar</div>
+        <div class="body-area">Body Area</div>
+    </div>
+
+    <div class="footer">Footer</div>
+
+</div>
+
+</body>
+</html>
