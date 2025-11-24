@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout 2 </title>
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#e6e6e6;
+    display:flex;
+    justify-content:center;
+    padding:40px 0;
+}
+
+.container{
+    width:80%;
+    background:#fff;
+    padding:10px 20px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    background:#c5c5c5;
+    padding:20px;
+    margin-bottom:10px;
+}
+
+.logo, .nav{
+    font-weight:bold;
+}
+
+.header-banner{
+    background:#c5c5c5;
+    padding:40px;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+.intro{
+    background:#c5c5c5;
+    padding:25px;
+    margin-bottom:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.box-row{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.box{
+    flex:1;
+    background:#c5c5c5;
+    padding:70px 0;
+    text-align:center;
+    font-weight:bold;
+}
+
+.footer{
+    background:#c5c5c5;
+    padding:20px;
+    text-align:center;
+    font-weight:bold;
+}
+
+</style>
+<body>
+    
+
+<div class="container">
+
+    <header class="topbar">
+        <div class="logo">Logo</div>
+        <div class="nav">Navigation</div>
+    </header>
+
+    <div class="header-banner">Header / Banner</div>
+
+    <div class="intro">Intro Text Area</div>
+
+    <div class="box-row">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <footer class="footer">Footer</footer>
+</div>
+</body>
+</html>
