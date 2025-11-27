@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Collections</title>
+  <style>
+    /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7eaf0;
+  color: #111;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  background: #ffbc40;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.search-btn {
+  background: #eef1f4;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* HERO SECTION */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px 0;
+}
+
+.left .small-tag {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.accent {
+  color: #19cbb5;
+}
+
+.lead {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #ffdd57;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.thumbs {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.thumbs img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* WATCH IMAGES */
+.right {
+  position: relative;
+  height: 420px;
+}
+
+.watch {
+  width: 230px;
+  position: absolute;
+  border-radius: 20px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+}
+
+.watch.one {
+  right: 55%;
+  top: 40px;
+  transform: rotate(-12deg);
+}
+
+.watch.two {
+  left: 35%;
+  top: 60px;
+  transform: scale(1.1);
+}
+
+.watch.three {
+  right: 10%;
+  top: 120px;
+  transform: rotate(10deg);
+}
+
+.bg-number {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  font-size: 180px;
+  color: #f2f2f2;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* FOOTER BAND */
+.footer-band {
+  background: #000;
+  color: #19cbb5;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+  </style>
+  
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo">M</div>
+        <div style="font-size:14px;color:#666;">M Watch</div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#">Watches</a>
+        <a href="#">About</a>
+        <a href="#">Blogs</a>
+        <a class="search-btn" href="#">Search</a>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="left">
+        <div class="small-tag">M Watch</div>
+
+        <h1>
+          Watch <span class="accent">Collections</span><br>
+          For You
+        </h1>
+
+        <p class="lead">For first purchases get 10% off. High quality mockups available.</p>
+
+        <div class="cta-row">
+          <button class="btn">Shop Watch</button>
+        </div>
+
+        <div class="thumbs">
+          <img src="images/watch1.jpeg">
+          <img src="images/watch2.jpeg">
+          <img src="images/watch3.jpeg">
+        </div>
+      </div>
+
+      <div class="right">
+        <img class="watch one" src="images/watch1.jpeg">
+        <img class="watch two" src="images/watch2,jpeg">
+        <img class="watch three" src="images/watch3.jpeg">
+
+        <div class="bg-number">01</div>
+      </div>
+    </section>
+
+    <!-- FOOTER PART -->
+    <div class="footer-band">Fully Smart Watch — Best Seller</div>
+
+  </div>
+
+</body>
+</html>
