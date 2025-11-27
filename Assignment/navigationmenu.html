@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Demo</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* BLOCK NAVIGATION */
+.block-nav a {
+    display: block;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+/* INLINE NAVIGATION */
+.inline-nav a {
+    display: inline;
+    margin-right: 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* INLINE-BLOCK NAVIGATION */
+.inline-block-nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2196F3;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* FLOAT NAVIGATION */
+.float-nav a {
+    float: left;
+    padding: 10px 20px;
+    background: #ff9800;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+/* CLEAR FIX */
+.clear {
+    clear: both;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h2>Block Navigation</h2>
+        <div class="block-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Inline Navigation</h2>
+        <div class="inline-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Inline-Block Navigation</h2>
+        <div class="inline-block-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Float Navigation</h2>
+        <div class="float-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+</body>
+</html>
