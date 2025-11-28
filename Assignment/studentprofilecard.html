@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Card</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-img img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4a90e2;
+}
+
+.profile-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-info h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #555;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-card">
+
+            <div class="profile-img">
+                <img src="images/shambhavi.jpeg" alt="Profile Photo">
+            </div>
+
+            <div class="profile-info">
+                <h2>Shambhavi Tripathi</h2>
+
+                <p><strong>Father's Name:</strong> Ashutosh Tripathi</p>
+                <p><strong>College:</strong> Academy of Business and Engineering Sciences  
+                Engineering College, Ghaziabad (College Code - 032)</p>
+
+                <p><strong>Admission Number:</strong> 2025B15310077</p>
+                <p><strong>Course:</strong> CSE AI-ML</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
