@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Product Grid</title>
+  <style>
+    :root{
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #0ea5a4;
+      --accent-2: #7c3aed;
+      --radius: 12px;
+      --shadow: 0 6px 18px rgba(13, 24, 40, 0.08);
+      --max-width: 1200px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#0f172a}
+
+    .wrap{max-width:var(--max-width);margin:40px auto;padding:24px;}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    header h1{font-size:20px;margin:0}
+    header p{margin:0;color:var(--muted)}
+
+    /* Controls (search / sort) */
+    .controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .search{display:flex;gap:8px;align-items:center;background:var(--card);padding:8px 12px;border-radius:999px;box-shadow:var(--shadow)}
+    .search input{border:0;outline:none;background:transparent;font-size:14px}
+    .select{background:var(--card);padding:8px;border-radius:8px;box-shadow:var(--shadow)}
+
+    /* Grid */
+    .grid{display:grid;gap:18px}
+    /* Default mobile: 1 col */
+    .grid{grid-template-columns:repeat(1,1fr)}
+
+    /* Small screens (>=640px) - 2 columns */
+    @media (min-width:640px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    /* Medium (>=900px) - 3 columns */
+    @media (min-width:900px){
+      .grid{grid-template-columns:repeat(3,1fr)}
+    }
+    /* Large (>=1200px) - 4 columns */
+    @media (min-width:1200px){
+      .grid{grid-template-columns:repeat(4,1fr)}
+    }
+
+    .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .18s ease, box-shadow .18s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(13,24,40,0.12)}
+
+    .media{position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;flex-shrink:0;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center}
+    .media img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .badge{position:absolute;left:12px;top:12px;background:rgba(255,255,255,0.95);padding:6px 8px;border-radius:999px;font-weight:600;font-size:12px}
+
+    .body{padding:14px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+    .title{font-weight:700;font-size:15px;margin:0}
+    .desc{font-size:13px;color:var(--muted);margin:0}
+
+    .meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .price{font-weight:800}
+    .rating{font-size:13px;color:var(--muted)}
+
+    .actions{display:flex;gap:8px;margin-top:6px}
+    .btn{border:0;padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+    .btn-ghost{background:transparent;border:1px solid #e6e9ee}
+
+    /* Responsive text sizes */
+    @media (min-width:900px){header h1{font-size:22px}}
+
+    /* Small accessibility helper */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>ShopGrid — Featured Products</h1>
+        <p>Responsive product grid with accessible cards and breakpoints (mobile → desktop).</p>
+      </div>
+
+      <div class="controls">
+        <label class="search">
+          <span class="sr-only">Search products</span>
+          🔍
+          <input placeholder="Search products" aria-label="Search products" />
+        </label>
+        <select class="select" aria-label="Sort products">
+          <option>Sort: Popular</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <section class="grid" aria-live="polite">
+        <!-- Example product card (copy/loop to add more) -->
+
+        <article class="card" role="article">
+          <div class="media">
+            <span class="badge">New</span>
+            <img src="https://picsum.photos/seed/p1/1200/900" alt="Stylish headphones" />
+          </div>
+          <div class="body">
+            <h3 class="title">Stylish Headphones</h3>
+            <p class="desc">Comfort fit · 30hr battery · Bluetooth 5.2</p>
+            <div class="meta">
+              <div>
+                <div class="price">₹2,999</div>
+                <div class="rating">★ 4.6 (1.2k)</div>
+              </div>
+              <div class="actions">
+                <button class="btn btn-ghost" aria-label="Add to wishlist">♡</button>
+                <button class="btn btn-primary">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <span class="badge">Sale</span>
+            <img src="https://picsum.photos/seed/p2/1200/900" alt="Classic leather bag" />
+          </div>
+          <div class="body">
+            <h3 class="title">Classic Leather Bag</h3>
+            <p class="desc">Handcrafted · Water-resistant · 2-year warranty</p>
+            <div class="meta">
+              <div>
+                <div class="price">₹4,799 <small style="text-decoration:line-through;color:var(--muted);font-weight:600;margin-left:6px">₹5,999</small></div>
+                <div class="rating">★ 4.8 (480)</div>
+              </div>
+              <div class="actions">
+                <button class="btn btn-ghost" aria-label="Add to wishlist">♡</button>
+                <button class="btn btn-primary">Buy now</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <img src="https://picsum.photos/seed/p3/1200/900" alt="Smartwatch with silicone strap" />
+          </div>
+          <div class="body">
+            <h3 class="title">Active Smartwatch</h3>
+            <p class="desc">Heart-rate · GPS · 7-day battery</p>
+            <div class="meta">
+              <div>
+                <div class="price">₹6,199</div>
+                <div class="rating">★ 4.4 (2.4k)</div>
+              </div>
+              <div class="actions">
+                <button class="btn btn-ghost" aria-label="Add to wishlist">♡</button>
+                <button class="btn btn-primary">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <span class="badge">Bestseller</span>
+            <img src="https://picsum.photos/seed/p4/1200/900" alt="Wireless speaker" />
+          </div>
+          <div class="body">
+            <h3 class="title">Portable Speaker</h3>
+            <p class="desc">360° sound · IPX7 waterproof</p>
+            <div class="meta">
+              <div>
+                <div class="price">₹1,499</div>
+                <div class="rating">★ 4.7 (8.9k)</div>
+              </div>
+              <div class="actions">
+                <button class="btn btn-ghost" aria-label="Add to wishlist">♡</button>
+                <button class="btn btn-primary">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more cards as needed... -->
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>
